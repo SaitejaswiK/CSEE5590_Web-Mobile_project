@@ -1,5 +1,5 @@
-# CSEE5590_Web-MobileProgramming_ICP
-This repo contains all the coursework of class CSEE5590 Web/Mobile Programming ICP of Spring 2020 semester.
+# CSEE5590_Web-MobileProgramming_Project
+This repo contains all the coursework of class CSEE5590 Web/Mobile Programming project of Spring 2020 semester.
 
 The coursework is divided into 2 modules
 
