@@ -1,29 +1,43 @@
 package com.sawapps.baymaxhealthcare;
 
-import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.content.Context;
+import android.location.Location;
+import android.location.LocationManager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import android.os.Bundle;
 import android.view.View;
 
+import com.google.android.gms.location.LocationListener;
+
+
 public class DoctorActivity extends AppCompatActivity {
+    private LocationManager loc_manager;
+    private LocationListener loc_listen;
+    private double location_lat;
+    private double location_long;
+    private String api_key = "AIzaSyA2iDaRP8Bx5ghKbh-dhWQ0iqiBlDTpXxU";
+    private String req_url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + location_lat + "," + location_long + "&radius=1500&type=doctor&key=" + api_key;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        loc_manager = (LocationManager) getSystemService(LOCATION_SERVICE);
+        loc_listen = new LocationListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onLocationChanged(Location location) {
+                location_lat = location.getLatitude();
+                location_long = location.getLongitude();
             }
-        });
+        };
+        //loc_manager.requestLocationUpdates("gps", 5000, 0, loc_listen);
+
     }
 
+    public void populate_list(View view) {
+
+    }
 }
