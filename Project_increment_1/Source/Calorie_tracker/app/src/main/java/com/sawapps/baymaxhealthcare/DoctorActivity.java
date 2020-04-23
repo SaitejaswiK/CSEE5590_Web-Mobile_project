@@ -5,6 +5,7 @@ import android.location.Location;
 import android.location.LocationManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.google.android.gms.location.LocationListener;
@@ -34,10 +35,16 @@ public class DoctorActivity extends AppCompatActivity {
             }
         };
         //loc_manager.requestLocationUpdates("gps", 5000, 0, loc_listen);
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.doc_list);
+        populate_list(recyclerView);
 
     }
 
     public void populate_list(View view) {
+        String doc_name;
+        String doc_image;
+        String doc_address;
 
+        
     }
 }
