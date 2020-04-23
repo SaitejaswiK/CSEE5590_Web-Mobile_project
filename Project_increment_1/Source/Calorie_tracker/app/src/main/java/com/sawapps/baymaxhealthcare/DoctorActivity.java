@@ -41,10 +41,8 @@ public class DoctorActivity extends AppCompatActivity {
     }
 
     public void populate_list(View view) {
-        String doc_name;
-        String doc_image;
-        String doc_address;
 
-        
+
+
     }
 }
