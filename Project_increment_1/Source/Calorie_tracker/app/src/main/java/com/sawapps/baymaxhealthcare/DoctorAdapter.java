@@ -3,11 +3,13 @@ package com.sawapps.baymaxhealthcare;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -20,17 +22,26 @@ class DoctorAdapter extends RecyclerView.Adapter<DoctorAdapter.ViewHolder> {
     private  Context context;
 
     public DoctorAdapter(List<DoctorsList> doctorslist, Context applicationContext) {
+        this.doctorsLists = doctorslist;
+        this.context = applicationContext;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        return null;
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.activity_doctor, viewGroup, false);
+
+        return  new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(@NonNull ViewHolder viewHolder, final int i) {
+        final DoctorsList doctorsList = doctorsLists.get(i);
+        viewHolder.doc_name.setText(doctorsList.get_doc_name());
 
+        Picasso.get().load(doctorsList.get_doc_img()).into(viewHolder.doc_image);
+
+        viewHolder.doc_address.setText(doctorsList.get_doc_addr());
     }
 
     @Override

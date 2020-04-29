@@ -39,6 +39,12 @@
             android:layout_height="wrap_content"
             android:text="TextView" />
 
+        <ImageView
+            android:id="@+id/docimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_person_white_24dp" />
+
         <TextView
             android:id="@+id/docaddr"
             android:layout_width="wrap_content"
