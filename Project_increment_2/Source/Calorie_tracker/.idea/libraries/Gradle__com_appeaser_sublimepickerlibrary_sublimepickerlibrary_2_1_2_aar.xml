@@ -1,12 +1,10 @@
 <component name="libraryTable">
   <library name="Gradle: com.appeaser.sublimepickerlibrary:sublimepickerlibrary:2.1.2@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/sublimepickerlibrary-2.1.2.aar/bdad3d785c8434011423bdea7c52bfd4/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/sublimepickerlibrary-2.1.2.aar/bdad3d785c8434011423bdea7c52bfd4/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/sublimepickerlibrary-2.1.2.aar/1e7fc901d70fff3d7a266c6258f617a6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/sublimepickerlibrary-2.1.2.aar/1e7fc901d70fff3d7a266c6258f617a6/res" />
     </CLASSES>
-    <JAVADOC>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.appeaser.sublimepickerlibrary/sublimepickerlibrary/2.1.2/7723aeb5314a637dcd17f4cfb3e745027ff5eaf6/sublimepickerlibrary-2.1.2-javadoc.jar!/" />
-    </JAVADOC>
+    <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.appeaser.sublimepickerlibrary/sublimepickerlibrary/2.1.2/e062ae8ed9c4d4c7917b9541f3b16bff46e4e65f/sublimepickerlibrary-2.1.2-sources.jar!/" />
     </SOURCES>

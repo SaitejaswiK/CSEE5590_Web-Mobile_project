@@ -24,7 +24,7 @@ android {
         config {
             keyAlias 'key0'
             keyPassword 'password'
-            storeFile file('C:\\Users\\Koppu\\Desktop\\WebMobile Programming\\Project\\Increment_2\\Calorie_tracker\\app\\release.jks')
+            storeFile file('release.jks')
             storePassword 'password'
         }
     }
@@ -80,6 +80,8 @@ dependencies {
     implementation 'com.google.maps.android:android-maps-utils:0.5+'
     implementation 'com.google.android.gms:play-services-maps:11.8.0'
     implementation 'com.github.Kunzisoft:Android-SwitchDateTimePicker:2.0'
+    implementation 'com.android.volley:volley:1.1.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
 }
 
 apply plugin: 'com.google.gms.google-services'
