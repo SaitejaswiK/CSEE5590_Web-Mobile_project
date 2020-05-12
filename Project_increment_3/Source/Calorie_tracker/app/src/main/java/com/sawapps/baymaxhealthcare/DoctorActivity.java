@@ -5,6 +5,7 @@ import android.location.Location;
 import android.location.LocationManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Adapter;
 import android.widget.Toast;
@@ -37,7 +38,7 @@ public class DoctorActivity extends AppCompatActivity {
     private String req_url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + location_lat + "," + location_long + "&radius=1500&type=doctor&key=" + api_key;
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
-    private List<DoctorsList> doctorslist;
+    private List<DoctorsList> doctorsLists;
 
 
     @Override
@@ -55,7 +56,9 @@ public class DoctorActivity extends AppCompatActivity {
         };
         //loc_manager.requestLocationUpdates("gps", 5000, 0, loc_listen);
         recyclerView = (RecyclerView) findViewById(R.id.doc_list);
-        doctorslist = new ArrayList<>();
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        doctorsLists = new ArrayList<>();
         populate_list();
 
     }
@@ -82,9 +85,9 @@ public class DoctorActivity extends AppCompatActivity {
 
                         DoctorsList doctors = new DoctorsList(jo.getString("name"),
                                 jo.getString("icon"), jo.getString("vicinity"));
-                        doctorslist.add(doctors);
+                        doctorsLists.add(doctors);
 
-                        adapter = new DoctorAdapter(doctorslist, getApplicationContext());
+                        adapter = new DoctorAdapter(doctorsLists, getApplicationContext());
                         recyclerView.setAdapter(adapter);
                     }
                 } catch (JSONException e) {
